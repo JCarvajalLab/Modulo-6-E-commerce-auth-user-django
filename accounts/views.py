@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm
 from django.contrib.auth import login
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import logout
 
 def home(request):
     return render(request, 'home.html')
@@ -26,3 +27,7 @@ def user_login(request):
     else:
         form = AuthenticationForm()
     return render(request, 'accounts/login.html', {'form':form})
+
+def user_logout(request):
+    logout(request)
+    return redirect('home')
