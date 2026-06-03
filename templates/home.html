@@ -1,11 +1,63 @@
 {% extends 'base.html' %}
+
 {% block title %}
 Inicio
 {% endblock %}
+
 {% block content %}
-    <h1>Bienvenido a Ecommerce</h1>
-    <p>Proyecto desarrollado con Django para el Módulo 6.</p>
-{% if user.is_authenticated %}
-    <p>Sesión iniciada como {{ user.username }}</p>
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-4">
+        {% if user.is_authenticated %}
+            <h1 class="display-5 fw-bold">Bienvenido {{ user.username }}</h1>
+            <p class="col-md-8 fs-5">
+                Has iniciado sesión correctamente en Ecommerce.
+                Ahora puedes acceder a las funcionalidades exclusivas para usuarios registrados,
+                gestionar tu cuenta y acceder a tu panel personal.
+            </p>
+            <a href="{% url 'dashboard' %}" class="btn btn-success btn-lg">Ir al Dashboard</a>
+        {% else %}
+            <h1 class="display-5 fw-bold">Bienvenido a Ecommerce</h1>
+            <p class="col-md-8 fs-5">
+                Plataforma desarrollada con Django para el Módulo 6.
+                Regístrate para acceder a funciones exclusivas y explorar todas las opciones disponibles.
+            </p>
+            <a href="{% url 'register' %}" class="btn btn-primary btn-lg">Comenzar ahora</a>
+        {% endif %}
+    </div>
+</div>
+{% if not user.is_authenticated %}
+<div class="row">
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Registro</h5>
+                <p class="card-text">
+                    Crea una cuenta para acceder al sistema y comenzar tu experiencia.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Inicio de sesión</h5>
+                <p class="card-text">
+                    Accede utilizando tus credenciales y continúa donde lo dejaste.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Dashboard</h5>
+                <p class="card-text">
+                    Descubre las funcionalidades disponibles para usuarios autenticados.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endif %}
 {% endblock %}
