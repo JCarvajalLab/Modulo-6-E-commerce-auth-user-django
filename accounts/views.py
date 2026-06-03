@@ -36,3 +36,7 @@ def user_logout(request):
 @login_required
 def dashboard(request):
     return render(request, 'accounts/dashboard.html')
+
+@login_required
+def products(request):
+    return render(request, 'accounts/products.html')
