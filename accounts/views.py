@@ -3,6 +3,7 @@ from .forms import CustomUserCreationForm
 from django.contrib.auth import login
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
 
 def home(request):
     return render(request, 'home.html')
@@ -31,3 +32,7 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     return redirect('home')
+
+@login_required
+def dashboard(request):
+    return render(request, 'accounts/dashboard.html')
