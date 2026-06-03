@@ -1,17 +1,11 @@
 {% extends 'base.html' %}
-
 {% block title %}
 Inicio
 {% endblock %}
-
 {% block content %}
-
-<h1>Home funcionando</h1>
-
-<p>Proyecto Ecommerce - Módulo 6</p>
-
+    <h1>Bienvenido a Ecommerce</h1>
+    <p>Proyecto desarrollado con Django para el Módulo 6.</p>
 {% if user.is_authenticated %}
-    <p>Bienvenido {{ user.username }}</p>
+    <p>Sesión iniciada como {{ user.username }}</p>
 {% endif %}
-
 {% endblock %}
