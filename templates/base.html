@@ -6,14 +6,13 @@
     <title>{% block title %}Ecommerce{% endblock %}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-        {% include 'components/navbar.html' %}
+<body class="d-flex flex-column min-vh-100">
+    {% include 'components/navbar.html' %}
 
-    <main>
+    <main class="container flex-grow-1 py-4">
         {% block content %}
         {% endblock %}
     </main>
-
     {% include 'components/footer.html' %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
