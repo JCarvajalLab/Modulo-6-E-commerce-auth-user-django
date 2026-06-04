@@ -1,12 +1,13 @@
 # DESARROLLO DE APLICACIONES WEB CON PYTHON DJANGO (V2)
 
 ## Tabla de contenidos
-- [Fundamentos de bases de datos relacionales](#fundamentos-de-bases-de-datos-relacionales)
+- [DESARROLLO DE APLICACIONES WEB CON PYTHON DJANGO (V2)](#desarrollo-de-aplicaciones-web-con-python-django-v2)
     - [Tabla de contenidos](#tabla-de-contenidos)
     - [Instrucciones](#instrucciones)
     - [Construido con](#construido-con)
-    - [Ejecutar](#ejecutar)
-
+    - [Instalación y ejecución del proyecto](#instalación-y-ejecución-del-proyecto)
+    - [Rutas principales](#rutas-principales)
+    - [Evidencia](#evidencia)
     - [GitHub Repositorio](#github-repositorio)
     - [Estructura del proyecto](#estructura-del-proyecto)
     - [Autor](#Autor)
@@ -130,6 +131,14 @@ http://127.0.0.1:8000/
         └── 📁css
             ├── styles.css
         └── 📁images
+            ├── image1.png
+            ├── image2.png
+            ├── image3.png
+            ├── image4.png
+            ├── image5.png
+            ├── image6.png
+            ├── image7.png
+            ├── image8.png
     └── 📁templates
         └── 📁accounts
             ├── dashboard.html
