@@ -7,6 +7,7 @@
     - [Construido con](#construido-con)
     - [Instalación y ejecución del proyecto](#instalación-y-ejecución-del-proyecto)
     - [Rutas principales](#rutas-principales)
+    - [Usuarios de prueba](#usuarios-de-prueba)
     - [Evidencia](#evidencia)
     - [GitHub Repositorio](#github-repositorio)
     - [Estructura del proyecto](#estructura-del-proyecto)
@@ -29,7 +30,7 @@ permitan diferenciar el acceso a determinadas secciones del e-commerce.
 ### Entrar a la carpeta:
 
 ```bash
-cd actividad_m6_l5
+cd ecommerce
 ```
 
 ---
@@ -52,7 +53,7 @@ venv\Scripts\activate
 ### Instalar dependencias
 
 ```bash
-pip install django
+pip install -r requirements.txt
 ```
 
 ---
@@ -79,6 +80,20 @@ http://127.0.0.1:8000/
 | /products / | Vista protegida      |      Si       |
 
 ---
+
+## Usuarios de prueba
+
+Los siguientes usuarios están disponibles para probar la aplicación:
+
+| Usuario | Email | Contraseña |Rol|
+|---------|-------|------------|---|
+| `boss` | `boss@gmail.com` | `123` |`SuperUser`|
+| `felipe` | `null`| `pipe1234` |`usuario comun`|
+| `jordan` | `null`| `jor12345` |`usuario comun`|
+| `jose` | `null`| `pepe12345` |`usuario comun`|
+> [!NOTE]
+> Al crear un nuevo usuario solo es permitido crear un usuario comun.
+> El super usuario fue creado con el comando `createsuperuser` en la consola para temas de prueba
 
 ## Evidencia 
 ### Pagina principal
