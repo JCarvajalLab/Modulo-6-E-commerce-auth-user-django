@@ -39,4 +39,18 @@ def dashboard(request):
 
 @login_required
 def products(request):
-    return render(request, 'accounts/products.html')
+    productos_demo = [
+        {"nombre": "Notebook Lenovo", "precio": "$650.000"},
+        {"nombre": "Mouse inalámbrico", "precio": "$12.000"},
+        {"nombre": "Teclado mecánico", "precio": "$45.000"},
+        {"nombre": "Monitor 24 pulgadas", "precio": "$120.000"},
+        {"nombre": "Audífonos Gamer", "precio": "$35.000"},
+        {"nombre": "Webcam Full HD", "precio": "$28.000"},
+        {"nombre": "Disco SSD 1TB", "precio": "$85.000"},
+        {"nombre": "Tablet Samsung", "precio": "$220.000"},
+        {"nombre": "Impresora Multifuncional", "precio": "$95.000"},
+        {"nombre": "Silla Gamer", "precio": "$180.000"},
+        {"nombre": "Smartwatch", "precio": "$75.000"},
+        {"nombre": "Parlante Bluetooth", "precio": "$42.000"},
+    ]
+    return render(request, 'accounts/products.html', {"products" : productos_demo})
